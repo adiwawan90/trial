@@ -59,12 +59,19 @@ function App() {
   return (
     <>
       <div className="container mx-auto mt-14">
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center">
           <SearchBox
             placeholder="Search Movies By Name"
             handleChange={onChangeSearch}
           />
-          <button onClick={submit}>Search</button>
+          <div className="">
+            <button
+              onClick={submit}
+              className="bg-green-500 h-10 ml-1 p-2 rounded"
+            >
+              Search
+            </button>
+          </div>
         </div>
         <RenderList data={data} />
         {loading ? (
