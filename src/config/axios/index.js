@@ -6,6 +6,6 @@ const instance = axios.create({
   baseURL: `http://www.omdbapi.com`,
 });
 
-instance.interceptors.response.use((response) => response.data, errorHandler);
+instance.interceptors.response.use((response) => response, errorHandler);
 
 export default instance;
